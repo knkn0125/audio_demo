@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>音のデジタル表現</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <h1>音のデジタル表現</h1>
+
+  <!-- ================= -->
+  <!-- ❶ 音の要素と波形 -->
+  <!-- ================= -->
+
+  <section>
+
+    <h2>❶ 音の要素と波形の関係</h2>
+
+    <p>
+      周波数を変えると音の高さが、
+      振幅を変えると音の大きさが変化します。
+    </p>
+
+    <canvas
+      id="waveCanvas"
+      width="900"
+      height="250">
+    </canvas>
+
+    <label>
+      周波数
+      <input
+        id="frequency"
+        type="range"
+        min="1"
+        max="10"
+        value="3">
+    </label>
+
+    <label>
+      振幅
+      <input
+        id="amplitude"
+        type="range"
+        min="20"
+        max="100"
+        value="60">
+    </label>
+
+  </section>
+
+  <hr>
+  <section>
+    <h2>❷音のデジタル化</h2>
+    <p>
+        以下の3ステップでデジタル化されます。
+    </p>
+  </section>
+
+  <!-- ================= -->
+  <!-- ❷① 標本化 -->
+  <!-- ================= -->
+
+  <section>
+    
+    <h2>① 標本化</h2>
+
+    <canvas
+      id="samplingCanvas"
+      width="900"
+      height="250">
+    </canvas>
+
+    <label>
+      標本化点数
+      <input
+        id="sampleCount"
+        type="range"
+        min="4"
+        max="64"
+        value="16">
+    </label>
+
+    <label>
+      <input
+        id="showOriginalWave"
+        type="checkbox"
+        checked>
+
+      元の波形を表示
+    </label>
+
+  </section>
+
+  <hr>
+
+  <!-- ================= -->
+  <!-- ❷② 量子化 -->
+  <!-- ================= -->
+
+  <section>
+
+    <h2>② 量子化</h2>
+
+    <canvas
+      id="quantizationCanvas"
+      width="900"
+      height="250">
+    </canvas>
+
+    <label>
+      量子化ビット数
+      <input
+        id="bitDepth"
+        type="range"
+        min="1"
+        max="8"
+        value="3">
+    </label>
+
+    <label>
+      <input
+        id="quantizationEnabled"
+        type="checkbox"
+        checked>
+
+      量子化を適用
+    </label>
+
+  </section>
+
+  <hr>
+
+  <!-- ================= -->
+  <!-- ❷③ 符号化 -->
+  <!-- ================= -->
+
+  <section>
+
+    <h2>③ 符号化</h2>
+
+    <canvas
+      id="encodingCanvas"
+      width="900"
+      height="250">
+    </canvas>
+
+    <p id="binaryOutput"></p>
+
+    <label>
+        <input
+            id="encodingEnabled"
+            type="checkbox">
+
+        2進数で表示
+    </label>
+
+  </section>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

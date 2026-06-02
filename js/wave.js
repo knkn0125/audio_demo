@@ -1,0 +1,2 @@
+drawWave()
+getWaveValue()
