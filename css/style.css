@@ -9,3 +9,17 @@ canvas {
     border: 1px solid #ccc;
     width: 100%;
 }
+
+.wave-demo {
+    margin: 20px 0;
+}
+
+.wave-demo img {
+    width: 500px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 500px;
+}

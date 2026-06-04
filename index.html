@@ -18,12 +18,70 @@
   <section>
 
     <h2>❶ 音の要素と波形の関係</h2>
-
+    
     <p>
-      周波数を変えると音の高さが、
-      振幅を変えると音の大きさが変化します。
+      音の3要素「周波数」「振幅」「波形」が音の聞こえ方にどう影響するのか確認しましょう。
     </p>
 
+    <h3>周波数による違い</h3>
+      <div class="wave-demo">
+        <img src="images/frequency.png" alt="周波数による違い">
+        <p>220Hz</p>
+        <audio controls>
+          <source src="sounds/sine_wave_low.wav" type="audio/wav">
+        </audio>
+        <p>440Hz</p>
+        <audio controls>
+          <source src="sounds/sine_wave.wav" type="audio/wav">
+        </audio>
+        <p>880Hz</p>
+        <audio controls>
+          <source src="sounds/sine_wave_high.wav" type="audio/wav">
+        </audio>
+      </div>
+    <h3>振幅による違い</h3>
+      <div class="wave-demo">
+        <img src="images/amplitude.png" alt="振幅による違い">
+        <p>大</p>
+        <audio controls>
+          <source src="sounds/sine_wave.wav" type="audio/wav">
+        </audio>
+        <p>小</p>
+        <audio controls>
+          <source src="sounds/sine_wave_small.wav" type="audio/wav">
+        </audio>
+      </div>
+
+    <h3>波形による違い</h3>
+      <div class="wave-demo">
+        <h4>正弦波</h4>
+        <img src="images/sine_wave.png" alt="正弦波">
+        <audio controls>
+          <source src="sounds/sine_wave.wav" type="audio/wav">
+        </audio>
+        <h4>のこぎり波</h4>
+        <img src="images/saw_wave.png" alt="のこぎり波">
+        <audio controls>
+          <source src="sounds/saw_wave.wav" type="audio/wav">
+        </audio>
+        <h4>矩形波</h4>
+        <img src="images/square_wave.png" alt="矩形波">
+        <audio controls>
+          <source src="sounds/square_wave.wav" type="audio/wav">
+        </audio>
+      </div>
+
+
+    
+
+  </section>
+
+  <hr>
+  <section>
+    <h2>❷音のデジタル化</h2>
+    <p>
+       以下の正弦波をデジタル化していきましょう。
+    </p>
     <canvas
       id="waveCanvas"
       width="900"
@@ -49,12 +107,6 @@
         max="100"
         value="60">
     </label>
-
-  </section>
-
-  <hr>
-  <section>
-    <h2>❷音のデジタル化</h2>
     <p>
         以下の3ステップでデジタル化されます。
     </p>
